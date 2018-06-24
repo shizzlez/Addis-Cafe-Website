@@ -149,7 +149,7 @@ a:hover {
   flex-wrap: wrap;
   justify-content: flex-start;
   color: white;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 .flex-outer li {
   display: flex;
@@ -247,7 +247,7 @@ border: 1px solid #000;
   align-content: space-between;
 }
 
-/* blöd weil webkit nur auf chrome und safari funktioniert, manno*/
+/* blĂśd weil webkit nur auf chrome und safari funktioniert, manno*/
 
 @media screen and (max-width:600px) {
 

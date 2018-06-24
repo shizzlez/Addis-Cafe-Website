@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Addis Café Leipzig </title>
+  <meta lang="de">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" href="main.css" type="text/css">
+  <link id="page_favicon" href="favicon.ico" rel="icon" type="images/x-icon">
+
+  <style type="text/css">a {text-decoration: none} </style>
+</head>
+
+<body>
+
+  <!--hintergrund-->
+  <div class="background">
+    <img id="bg" src="AC_edited_1 (14).jpeg" alt="" title="">
+  </div>
+
+  <div id="wrapper">
+
+  <!--Navi-->
+  <div class="flexin">
+  <nav>
+  <div id="menuToggle">
+
+    <input class="checkbox" type="checkbox">
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <div class="span-container"> </div>
+
+    <ul id="menu">
+      <a href="startseite.html">Startseite</a> <br>
+      <a href="menu.html">Menü</a> <br>
+      <a href="reservierung.html">Reservierung</a> <br>
+      <a href="städtepartnerschaft.html">Städtepartnerschaft</a> <br>
+      <a href="eventsundaktuelles.html">Events und Aktuelles</a> <br>
+      <a href="kontaktundanfahrt.html">Kontakt und Anfahrt</a> <br>
+      <a href="impressum.html">Impressum</a> <br>
+    </ul>
+  </div>
+
+  </nav>
+
+<!-- Content -->
+
+  <div class="content-container">
+    <h1> Kontakt und Anfahrt </h1>
+    <p> Addis Café Leipzig <br>
+        Brüderstraße 39 <br>
+        04103 Leipzig <br>
+
+        Tel: 0341 – 69 840 204 <br>
+        Mail: info@addis-cafe.de <br> </p>
+    <p>Anfahrt</p>
+    <div id="map" style="width:100%;height:600px;"></div>
+
+
+</div>
+</div>
+</div>
+
+<!--Map-->
+<script>
+function myMap() {
+  var myLatLng = {lat: 51.332732, lng: 12.384632};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 18,
+    center: myLatLng
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Addis Café'
+  });
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAVz9M3bFTRA1T_r-qtQHheJ2JCbcDPAE&callback=myMap"></script>
+
+<!--
+<footer>
+
+  <div class="ersteller"> Wir lol </div>
+  <div class="kontakt"
+  <div class="Kontakt"> wir@gmail.com </div>
+  <div class="Telefon"> 000 00 000000 000 </div>
+   </div>
+
+</footer>
