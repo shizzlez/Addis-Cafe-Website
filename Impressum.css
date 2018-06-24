@@ -2,6 +2,11 @@ h{font-family: open sans, arial, sans-serif;
 color: white;
 
 }
+body{
+  background-image: url(background.jpeg);
+  background-size:contain;
+  background-position:top;
+}
 div.sidenav h1 {
      font-size: 26x;
      font-family: open sans, arial, sans-serif;
@@ -31,9 +36,6 @@ div.sidenav a {
      font-weight:lighter;
      padding-left: 15px;
 
-}
-body {
-  background: black;
 }
 
 
