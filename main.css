@@ -249,6 +249,20 @@ border: 1px solid #000;
 
 /* blĂśd weil webkit nur auf chrome und safari funktioniert, manno*/
 
+@media screen and (max-width:1020px) {
+
+.content-container {
+
+  height: 100%;
+  width: 80%;
+  margin-top: 30px;
+  margin-left: 200px;
+  padding: 40px;
+  padding-top: 50px;
+  background-color: black;
+}
+}
+
 @media screen and (max-width:600px) {
 
   body {
