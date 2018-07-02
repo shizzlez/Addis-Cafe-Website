@@ -247,6 +247,32 @@ border: 1px solid #000;
   align-content: space-between;
 }
 
+sup {
+  line-height: 0px;
+  font-size: 12px;
+}
+
+hr
+{
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to left, #333, #FF3300, #333);
+}
+
+
+.content-container section {
+  color: white;
+  flex: 1;
+  background: black;
+
+}
+.content-container table {
+  color: white;
+  flex: 1;
+  background: black;
+}
+
+
 /* blĂśd weil webkit nur auf chrome und safari funktioniert, manno*/
 
 @media screen and (max-width:1020px) {
@@ -265,28 +291,28 @@ border: 1px solid #000;
 
 @media screen and (max-width:600px) {
 
-  body {
+body {
     background-color: white;
-  }
+}
 
- #bg {
+#bg {
    display: none;
- }
+}
 
- .flexin {
+.flexin {
    display: flex;
    flex-direction: column;
    align-items: flex-end;
    flex-direction: column;
    flex-wrap: wrap;
- }
+}
 .content-container {
     padding-top: 14px;
     padding-bottom: 10px;
     height:100%;
     width: 100%;
     justify-content: flex-start;
-    color: white;
+    color: black;
     background: white;
     z-index:-1;
     overflow-y: hidden;
@@ -294,7 +320,7 @@ border: 1px solid #000;
     transition: transform 0.5s cubic-bezier(0,0,0,0)
 
   }
-.content-container > p {
+.content-container  p {
   padding: 4px 14px 10px 10px;
   letter-spacing: .01em;
   border-radius: 2px;
@@ -302,18 +328,14 @@ border: 1px solid #000;
   color: black;
   background: white;
 }
-.content-container > h1 {
-  color: black;
-  background: white;
-}
-  #menu  {
-    margin: -200px 0 0 -70px;
-  }
 
-  #menu li {
+#menu  {
+    margin: -200px 0 0 -70px;
+}
+#menu li {
     padding: 50px 0;
     font-size: 22px;
-  }
+}
 
   /*.span-container {
     width: 990px;
@@ -375,4 +397,45 @@ border: 1px solid #000;
   ::-webkit-scrollbar-thumb {
   display: none;
   }
+
+  sup {
+    line-height: 0px;
+    font-size: 12px;
+    color: black;
+  }
+
+  hr
+  {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to left, #333, #FF3300, #333);
+  }
+
+  .content-container h1, h2 {
+    color: black;
+    background-color: white;
+  }
+  .content-container section {
+    color: black;
+    background-color: white;
+  }
+  .content-container table {
+    color: black;
+    background-color: white;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*menu*/
