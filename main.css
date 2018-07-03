@@ -36,11 +36,11 @@ a:hover {
 
 #menuToggle input {
   display: block;
-  width: 40px;
-  height: 32px;
-  position: sticky;
-  top: -7px;
-  left: -5px;
+  width: 60px;
+  height: 52px;
+  position: absolute;
+  top: -15px;
+  left: -17px;
   cursor: pointer;
   opacity: 0;
   z-index: 2;
@@ -63,16 +63,16 @@ a:hover {
 }
 
 #menuToggle span:first-child {
-  transform-origin: 0% 0%;
+  transform-origin: 0% 10%;
 }
 
 #menuToggle span:nth-last-child(2) {
-  transform-origin: 0% 100%;
+  transform-origin: 0% 3%;
 }
 
 #menuToggle input:checked ~ span {
   opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
+  transform: rotate(45deg);
   background: grey;
 }
 
@@ -82,11 +82,12 @@ a:hover {
 }
 
 #menuToggle input:checked ~ span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(0, -1px);
+  opacity: 1;
+  transform: rotate(-45deg);
 }
 
 #menu {
-  position: fixed;
+  position: absolute;
   height: 600px;
   width: 300px;
   margin: -100px 0 0 -50px;
@@ -96,7 +97,7 @@ a:hover {
   list-style-type: none;
   transform: translate(-100%, 0);
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
+  z-index:0;}
 
 #menu li {
   padding: 10px 0;
@@ -112,7 +113,7 @@ a:hover {
 .content-container {
     display: flex;
     flex-direction: column;
-    z-index: 1000;
+    z-index: -1000;
     height: 100%;
     width: 60%;
     margin-top: 50px;
@@ -399,9 +400,9 @@ body {
 }
 
 #menu  {
-    margin: -200px 0 0 -70px;
+    margin: -100px 0 0 -70px;
 }
-#menu li {
+#menu ul {
     padding: 50px 0;
     font-size: 22px;
 }
