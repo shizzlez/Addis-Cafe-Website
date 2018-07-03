@@ -6,25 +6,12 @@ body {
   font-family: open-sans, Helvetica, sans-serif;
 }
 
-#bg {
-  min-height: 100%;
-  min-width: 1024px;
-  width: 100%;
-  height: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index:-1000;
+html {
+  background: url(bg.jpeg) no-repeat center center fixed;
+  background-size: cover;
 }
 
-/*
-#wrapper{ idk iwie krieg ich denn nicht sinnvoll eingebunden??
-  width: 99%;
-  margin: auto;
-  background-color: orange;
-}*/
-
-/*Hamburger: */
+/*Hamburger*/
 
 a {
   text-decoration: none;
@@ -247,6 +234,82 @@ border: 1px solid #000;
   align-content: space-between;
 }
 
+/*Gallery*/
+
+body, #slider, .wrap, .slidecontent{
+  margin: 0;
+  padding: 0;
+  font-family: open-sans, Sans-serif;
+  width: 100%;
+  height:100vh;
+  overflow-x: hidden;
+}
+
+.wrap {position: relative}
+
+.slide{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide1{background-image: url('images/imgg (1).jpeg')}
+.slide2{background-image: url('images/imgg (2).jpeg')}
+.slide3{background-image: url('images/imgg (3).jpeg')}
+.slide4{background-image: url('images/imgg (4).jpeg')}
+.slide5{background-image: url('images/imgg (5).jpeg')}
+.slide6{background-image: url('images/imgg (6).jpeg')}
+
+.slidecontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slidecontent span{
+  font-size:4rem;
+  color: white;
+  text-transform: capitalize;
+  top: 88%;
+  margin-top: -50px;
+  position: absolute;
+}
+
+.arrow{
+  cursor: pointer;
+  position: absolute;
+  top: 88%;
+  margin-top: -50px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#arrow-left {
+  border-width:  40px 40px 30px 0px;
+  left:0;
+  margin-left: 30px;
+  border-color: transparent orange transparent transparent;
+  box-shadow: 1 1 1 1;
+}
+
+#arrow-right {
+  border-width:  30px 0px 30px 40px;
+  right:0;
+  margin-right: 30px;
+  border-color: transparent transparent transparent orange;
+  box-shadow: 1 1 1 1;
+}
+
+.slidecontent span {
+  color: white;
+  background-color: grey;
+}
+
+/*Menu*/
+
 sup {
   line-height: 0px;
   font-size: 12px;
@@ -259,7 +322,6 @@ hr
   background: linear-gradient(to left, #333, #FF3300, #333);
 }
 
-
 .content-container section {
   color: white;
   flex: 1;
@@ -271,7 +333,6 @@ hr
   flex: 1;
   background: black;
 }
-
 
 /* blĂśd weil webkit nur auf chrome und safari funktioniert, manno*/
 
@@ -288,6 +349,14 @@ hr
   background-color: black;
 }
 }
+
+
+
+
+/*RESPONSIVE*/
+
+
+
 
 @media screen and (max-width:600px) {
 
@@ -398,6 +467,8 @@ body {
   display: none;
   }
 
+/*Menu*/
+
   sup {
     line-height: 0px;
     font-size: 12px;
@@ -423,19 +494,83 @@ body {
     color: black;
     background-color: white;
   }
+
+/*Reservierung*/
+
+
+.flex-outer li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: black;
+}
+.flex-outer input {
+  flex:1;
+}
+
+.flex-outer label,
+.flex-outer li p {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+
+.flex-outer li button {
+  margin-left: auto;
+  padding: 8px 16px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  border-radius: 2px;
+}
+
+.flex-outer {
+  list-style-type: none;
+  padding: 0;
 }
 
 
 
+.flex-outer > li:not(:last-child) {
+  margin-bottom: 20px;
+}
 
+.flex-outer li label,
+.flex-outer li p {
 
+  font-weight: 300;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
 
+.flex-outer  label,
+.flex-outer li p {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
 
+.flex-outer label {
+  flex: 1 0 220px;
+}
 
+.flex-outer li p {
+  margin: 0;
+}
 
+.flex-outer li input:not([type='checkbox']),
+.flex-outer li textarea {
+  padding: 15px;
+  border: none;
+}
 
+.flex-outer li button {
+  margin-left: auto;
+  padding: 8px 16px;
+  border: none;
+  background: orange;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 2px;
+}
 
-
-
-
-/*menu*/
+}
