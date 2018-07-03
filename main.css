@@ -125,19 +125,19 @@ a:hover {
 
 .content-container h1 {
   color: white;
-  flex: 1;
+
   padding-right: 20px;
   height: 100%;
   text-transform: uppercase;
+}
+.content-container ul {
+  color: white;
+
+  padding-right: 20px;
+  height: 100%;
+  
 }
 
-.content-container h2 {
-  color: white;
-  flex: 1;
-  padding-right: 20px;
-  height: 100%;
-  text-transform: uppercase;
-}
 
 
 .content-container p {
@@ -382,7 +382,7 @@ hr
    flex-wrap: wrap;
 }
 .content-container {
-    padding-top: 14px;
+    padding-top: 50px;
     padding-bottom: 10px;
     height:100%;
     width: 100%;
