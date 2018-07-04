@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Addis Café Leipzig </title>
+  <title> Kontakt und Anfahrt </title>
   <meta lang="de">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="main.css">
-  <link rel="stylesheet" href="main.css" type="text/css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAVz9M3bFTRA1T_r-qtQHheJ2JCbcDPAE&callback=myMap"></script>
   <link id="page_favicon" href="favicon.ico" rel="icon" type="images/x-icon">
 
   <style> a {text-decoration: none} </style>
@@ -60,34 +60,3 @@
 </div>
 </div>
 </div>
-
-<!--Map-->
-<script>
-function myMap() {
-  var myLatLng = {lat: 51.332732, lng: 12.384632};
-
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 18,
-    center: myLatLng
-  });
-
-  var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    title: 'Addis Café'
-  });
-}
-</script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAVz9M3bFTRA1T_r-qtQHheJ2JCbcDPAE&callback=myMap"></script>
-
-<!--
-<footer>
-
-  <div class="ersteller"> Wir lol </div>
-  <div class="kontakt"
-  <div class="Kontakt"> wir@gmail.com </div>
-  <div class="Telefon"> 000 00 000000 000 </div>
-   </div>
-
-</footer>
