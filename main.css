@@ -375,6 +375,7 @@ hr
   }*/
 
   #menuToggle span {
+    top: 40
     display: block;
     width: 33px;
     height: 4px;
@@ -384,8 +385,8 @@ hr
     border-radius: 3px;
     z-index: 1;
     transform-origin: 0px 0px;
-    transform: translate(-20px,-48px);
-    transition: transform 0 cubic-bezier(0,0,0,0),
+
+
 
   }
 
@@ -394,17 +395,20 @@ hr
     width: 33px;
     height: 4;
     position: relative;
-    transform: translate(3px,-1px);
+    top: 20px;
+    left: 48px;
     cursor: pointer;
     opacity: 0;
     z-index: 2;
     -webkit-touch-callout: none;
+    top: 40px;
+    left: -3px;
   }
 
 
   #menuToggle input:checked ~ span {
     opacity: 1;
-    transform: rotate(45deg) translate(0px, 0px);
+    transform: rotate(45deg);
     background: grey;
   }
 
@@ -414,13 +418,13 @@ hr
   }
 
   #menuToggle input:checked ~ span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(0, 0px);
+    transform: rotate(-45deg);
   }
 
 
   ::-webkit-scrollbar {
-    display: none;
-    }
+  display: none;
+  }
 
   ::-webkit-scrollbar-thumb {
   display: none;
@@ -442,6 +446,7 @@ hr
   }
 
   .content-container h1, h2 {
+text-indent: 70px;
     color: black;
     background-color: white;
   }
