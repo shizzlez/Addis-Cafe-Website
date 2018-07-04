@@ -135,7 +135,7 @@ a:hover {
 
   padding-right: 20px;
   height: 100%;
-  
+
 }
 
 
@@ -148,83 +148,36 @@ a:hover {
   color: white;
   overflow-y: hidden;
 }
-.flex-outer li {
+
+/*Reservierung*/
+
+.res-container li {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   color: white;
+  text-transform: uppercase;
+  font-weight: lighter;
+  padding: 5px;
 }
-.flex-outer input {
+
+.res-container input {
   flex:1;
 }
 
-.flex-outer label,
-.flex-outer li p {
-  flex: 1 0 120px;
+.res-container label {
+  flex: 1;
   max-width: 220px;
 }
 
-.flex-outer li button {
+.res-container button {
   margin-left: auto;
   padding: 8px 16px;
   border: none;
   text-transform: uppercase;
   letter-spacing: .1em;
-  border-radius: 2px;
-}
-
-.flex-outer {
-  list-style-type: none;
-  padding: 0;
-}
-
-.flex-outer li {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.flex-outer > li:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-.flex-outer li label,
-.flex-outer li p {
-  padding: 8px;
-  font-weight: 300;
-  letter-spacing: .09em;
-  text-transform: uppercase;
-}
-
-.flex-outer  label,
-.flex-outer li p {
-  flex: 1 0 120px;
-  max-width: 220px;
-}
-
-.flex-outer label {
-  flex: 1 0 220px;
-}
-
-.flex-outer li p {
-  margin: 0;
-}
-
-.flex-outer li input:not([type='checkbox']),
-.flex-outer li textarea {
-  padding: 15px;
-  border: none;
-}
-
-.flex-outer li button {
-  margin-left: auto;
-  padding: 8px 16px;
-  border: none;
-  background: grey;
+  background: orange;
   color: white;
-  text-transform: uppercase;
-  letter-spacing: .09em;
-  border-radius: 2px;
 }
 
 ::-webkit-scrollbar {
@@ -503,80 +456,52 @@ hr
 
 /*Reservierung*/
 
-
-.flex-outer li {
+.res-container li {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  color: black;
+  color: white;
+  text-transform: uppercase;
+  font-weight: lighter;
+  padding: 5px;
 }
-.flex-outer input {
+
+
+.res-container label {
+  flex: 1;
+  max-width: 220px;
+  color: black;
+  text-transform: capitalize;
+}
+
+
+
+.res-container li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
+  font-weight: lighter;
+  padding: 5px;
+}
+
+.res-container input {
   flex:1;
 }
 
-.flex-outer label,
-.flex-outer li p {
-  flex: 1 0 120px;
+.res-container label {
+  flex: 1;
   max-width: 220px;
 }
 
-.flex-outer li button {
+.res-container button {
   margin-left: auto;
   padding: 8px 16px;
   border: none;
   text-transform: uppercase;
   letter-spacing: .1em;
-  border-radius: 2px;
-}
-
-.flex-outer {
-  list-style-type: none;
-  padding: 0;
-}
-
-
-
-.flex-outer > li:not(:last-child) {
-  margin-bottom: 20px;
-}
-
-.flex-outer li label,
-.flex-outer li p {
-
-  font-weight: 300;
-  letter-spacing: .09em;
-  text-transform: uppercase;
-}
-
-.flex-outer  label,
-.flex-outer li p {
-  flex: 1 0 120px;
-  max-width: 220px;
-}
-
-.flex-outer label {
-  flex: 1 0 220px;
-}
-
-.flex-outer li p {
-  margin: 0;
-}
-
-.flex-outer li input:not([type='checkbox']),
-.flex-outer li textarea {
-  padding: 15px;
-  border: none;
-}
-
-.flex-outer li button {
-  margin-left: auto;
-  padding: 8px 16px;
-  border: none;
   background: orange;
   color: white;
-  text-transform: uppercase;
-  letter-spacing: .09em;
-  border-radius: 2px;
 }
-
 }
