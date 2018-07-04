@@ -1,3 +1,8 @@
+html {
+  background: url(bg.jpeg) no-repeat center center fixed;
+  background-size: cover;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -6,198 +11,24 @@ body {
   font-family: open-sans, Helvetica, sans-serif;
 }
 
-html {
-  background: url(bg.jpeg) no-repeat center center fixed;
-  background-size: cover;
-}
-
-/*Hamburger */
-
-a {
-  text-decoration: none;
-  color: white;
-  line-height: 2;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: orange;
-}
-
-#menuToggle {
-  display: block;
+#bg {
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
   position: fixed;
-  top: 50px;
-  left: 70px;
-  z-index: 1;
-  -webkit-user-select: none;
-  user-select: none;
+  top: 0;
+  left: 0;
+  z-index:-1000;
 }
 
-#menuToggle input {
-  display: block;
-  width: 60px;
-  height: 52px;
-  position: absolute;
-  top: -15px;
-  left: -17px;
-  cursor: pointer;
-  opacity: 0;
-  z-index: 2;
-  -webkit-touch-callout: none;
-}
+/*
+#wrapper{ idk iwie krieg ich denn nicht sinnvoll eingebunden??
+  width: 99%;
+  margin: auto;
+  background-color: orange;
+}*/
 
-#menuToggle span {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  background: orange;
-  border-radius: 3px;
-  z-index: 1;
-  transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child {
-  transform-origin: 0% 10%;
-}
-
-#menuToggle span:nth-last-child(2) {
-  transform-origin: 0% 3%;
-}
-
-#menuToggle input:checked ~ span {
-  opacity: 1;
-  transform: rotate(45deg);
-  background: grey;
-}
-
-#menuToggle input:checked ~ span:nth-last-child(3) {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-#menuToggle input:checked ~ span:nth-last-child(2) {
-  opacity: 1;
-  transform: rotate(-45deg);
-}
-
-#menu {
-  position: absolute;
-  height: 600px;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  background: black;
-  list-style-type: none;
-  transform: translate(-100%, 0);
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  z-index:0;}
-
-#menu li {
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-#menuToggle input:checked ~ ul {
-  transform: none;
-}
-
-/*content*/
-
-.content-container {
-    display: flex;
-    flex-direction: column;
-    z-index: -1000;
-    height: 100%;
-    width: 60%;
-    margin-top: 50px;
-    margin-left: 400px;
-    padding: 40px;
-    padding-top: 50px;
-    background-color: black;
-  }
-
-.content-container h1 {
-  color: white;
-
-  padding-right: 20px;
-  height: 100%;
-  text-transform: uppercase;
-}
-.content-container ul {
-  color: white;
-
-  padding-right: 20px;
-  height: 100%;
-
-}
-
-
-
-.content-container p {
-  padding: 20px 70px 20px 10px;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  color: white;
-  overflow-y: hidden;
-}
-
-/*Reservierung*/
-
-.res-container li {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  color: white;
-  text-transform: uppercase;
-  font-weight: lighter;
-  padding: 5px;
-}
-
-.res-container input {
-  flex:1;
-}
-
-.res-container label {
-  flex: 1;
-  max-width: 220px;
-}
-
-.res-container button {
-  margin-left: auto;
-  padding: 8px 16px;
-  border: none;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  background: orange;
-  color: white;
-}
-
-::-webkit-scrollbar {
-width: 10px;
-background: black;
-border: 1px solid #000;
-}
-
-::-webkit-scrollbar-thumb {
-background: orange;
-border: 1px solid #000;
-}
-
-.flexin {
-  display: flex;
-  align-items: flex-start;
-  align-content: space-between;
-}
-
-/*Gallery*/
 
 body, #slider, .wrap, .slidecontent{
   margin: 0;
@@ -271,217 +102,141 @@ body, #slider, .wrap, .slidecontent{
   background-color: grey;
 }
 
-/*Menu*/
 
-sup {
-  line-height: 0px;
-  font-size: 12px;
-}
+/*Hamburger: */
 
-hr
-{
-  border: 0;
-  height: 1px;
-  background: linear-gradient(to left, #333, #FF3300, #333);
-}
-
-.content-container section {
+a {
+  text-decoration: none;
   color: white;
-  flex: 1;
-  background: black;
-
-}
-.content-container table {
-  color: white;
-  flex: 1;
-  background: black;
+  line-height: 2;
+  transition: color 0.3s ease;
 }
 
-/* blĂśd weil webkit nur auf chrome und safari funktioniert, manno*/
+a:hover {
+  color: orange;
+}
+#titel {
 
-@media screen and (max-width:1020px) {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle {
+  display: block;
+  position: fixed;
+  top: 50px;
+  left: 70px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: sticky;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: orange;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: grey;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: fixed;
+  height: 600px;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: black;
+  list-style-type: none;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+/*content*/
 
 .content-container {
-
-  height: 100%;
-  width: 80%;
-  margin-top: 30px;
-  margin-left: 200px;
-  padding: 40px;
-  padding-top: 50px;
-  background-color: black;
-}
-}
-
-
-
-
-/*RESPONSIVE*/
-
-
-
-
-@media screen and (max-width:600px) {
-
-  html {
-      background: none;
-  }
-
-.flexin {
-   display: flex;
-   flex-direction: column;
-   align-items: flex-end;
-   flex-direction: column;
-   flex-wrap: wrap;
-}
-.content-container {
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    height: 100%;
+    width: 60%;
+    margin-top: 50px;
+    margin-left: 400px;
+    padding: 40px;
     padding-top: 50px;
-    padding-bottom: 10px;
-    height:100%;
-    width: 100%;
-    justify-content: flex-start;
-    color: black;
-    background: white;
-    z-index:-1;
-    overflow-y: hidden;
-    transform: translate(-30px,-10);
-    transition: transform 0.5s cubic-bezier(0,0,0,0)
-
-  }
-.content-container  p {
-  padding: 4px 14px 10px 10px;
-  letter-spacing: .01em;
-  border-radius: 2px;
-  margin-left: 50px;
-  color: black;
-  background: white;
-}
-
-#menu  {
-    margin: -100px 0 0 -70px;
-}
-#menu ul {
-    padding: 50px 0;
-    font-size: 22px;
-}
-
-  /*.span-container {
-    width: 990px;
-    height: 100px;
-    background: black;
-    z-index: -1px;
-    margin: -110px 0 0 -100px;
-    position: static;
-  }*/
-
-  #menuToggle span {
-    top: 40
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-    background: orange;
-    border-radius: 3px;
-    z-index: 1;
-    transform-origin: 0px 0px;
-
-
-
+    background-color: black;
   }
 
-  #menuToggle input {
-    display: block;
-    width: 33px;
-    height: 4;
-    position: relative;
-    top: 20px;
-    left: 48px;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 2;
-    -webkit-touch-callout: none;
-    top: 40px;
-    left: -3px;
-  }
-
-
-  #menuToggle input:checked ~ span {
-    opacity: 1;
-    transform: rotate(45deg);
-    background: grey;
-  }
-
-  #menuToggle input:checked ~ span:nth-last-child(3) {
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-  }
-
-  #menuToggle input:checked ~ span:nth-last-child(2) {
-    transform: rotate(-45deg);
-  }
-
-
-  ::-webkit-scrollbar {
-  display: none;
-  }
-
-  ::-webkit-scrollbar-thumb {
-  display: none;
-  }
-
-/*Menu*/
-
-  sup {
-    line-height: 0px;
-    font-size: 12px;
-    color: black;
-  }
-
-  hr
-  {
-    border: 0;
-    height: 1px;
-    background: linear-gradient(to left, #333, #FF3300, #333);
-  }
-
-  .content-container h1, h2 {
-
-    color: black;
-    background-color: white;
-  }
-
-  .content-container h1{
-    text-indent: 70px;
-  }
-  .content-container section {
-    color: black;
-    background-color: white;
-  }
-  .content-container table {
-    color: black;
-    background-color: white;
-  }
-
-/*Reservierung*/
-
-.res-container li {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+.content-container h1 {
   color: white;
-  text-transform: uppercase;
-  font-weight: lighter;
-  padding: 5px;
-}
-
-
-.res-container label {
   flex: 1;
-  max-width: 220px;
-  color: black;
-  text-transform: capitalize;
+  padding-right: 20px;
+  height: 100%;
+  text-transform: uppercase;
 }
+
+.content-container p {
+  padding: 20px 70px 20px 10px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  color: white;
+  overflow-y: hidden;
+}
+
+/* Reservierung */
 
 
 
@@ -513,4 +268,224 @@ hr
   background: orange;
   color: white;
 }
+
+::-webkit-scrollbar {
+width: 10px;
+background: black;
+border: 1px solid #000;
+}
+
+::-webkit-scrollbar-thumb {
+background: orange;
+border: 1px solid #000;
+}
+
+.flexin {
+  display: flex;
+  align-items: flex-start;
+  align-content: space-between;
+}
+
+sup {
+  line-height: 0px;
+  font-size: 12px;
+}
+
+hr
+{
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to left, #333, #FF3300, #333);
+}
+
+
+.content-container section {
+  color: white;
+  flex: 1;
+  background: black;
+
+}
+.content-container table {
+  color: white;
+  flex: 1;
+  background: black;
+}
+
+
+/* blĂśd weil webkit nur auf chrome und safari funktioniert, manno*/
+
+@media screen and (max-width:1020px) {
+
+.content-container {
+
+  height: 100%;
+  width: 80%;
+  margin-top: 30px;
+  margin-left: 200px;
+  padding: 40px;
+  padding-top: 50px;
+  background-color: black;
+}
+}
+
+@media screen and (max-width:600px) {
+
+body {
+    background-color: white;
+}
+
+html  {
+   background: none;
+}
+
+.flexin {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   flex-direction: column;
+   flex-wrap: wrap;
+}
+.content-container {
+    padding-top: 14px;
+    padding-bottom: 10px;
+    height:100%;
+    width: 100%;
+    justify-content: flex-start;
+    color: black;
+    background: white;
+  /*  z-index:-1; */
+    overflow-y: hidden;
+    transform: translate(-30px,-10);
+    transition: transform 0.5s cubic-bezier(0,0,0,0)
+
+  }
+.content-container  p {
+  padding: 4px 14px 10px 10px;
+  letter-spacing: .01em;
+  border-radius: 2px;
+  margin-left: 50px;
+  color: black;
+  background: white;
+}
+
+#menu  {
+    margin: -200px 0 0 -70px;
+}
+#menu li {
+    padding: 50px 0;
+    font-size: 22px;
+}
+
+  /*.span-container {
+    width: 990px;
+    height: 100px;
+    background: black;
+    z-index: -1px;
+    margin: -110px 0 0 -100px;
+    position: static;
+  }*/
+
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: orange;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 0px 0px;
+    transform: translate(-20px,-48px);
+    transition: transform 0 cubic-bezier(0,0,0,0),
+
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 33px;
+    height: 4;
+    position: relative;
+    transform: translate(3px,-1px);
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+  }
+
+
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);
+    background: grey;
+  }
+
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, 0px);
+  }
+
+
+  ::-webkit-scrollbar {
+    display: none;
+    }
+
+  ::-webkit-scrollbar-thumb {
+  display: none;
+  }
+/*Menu*/
+  sup {
+    line-height: 0px;
+    font-size: 12px;
+    color: black;
+  }
+
+  hr
+  {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to left, #333, #FF3300, #333);
+  }
+
+  .content-container h1, h2 {
+    color: black;
+    background-color: white;
+  }
+  .content-container section {
+    color: black;
+    background-color: white;
+  }
+  .content-container table {
+    color: black;
+    background-color: white;
+  }
+
+/*Reservierung*/
+
+
+.res-container li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
+  font-weight: lighter;
+  padding: 5px;
+}
+
+
+.res-container label {
+  flex: 1;
+  max-width: 220px;
+  color: black;
+  text-transform: capitalize;
+}
+
+
+
+
+
 }
